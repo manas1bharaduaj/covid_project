@@ -1,0 +1,47 @@
+.card {
+    width: 300px;
+    margin-top: 3%;
+    margin-left: 36%;
+
+}
+.was-validated {
+    
+    margin-left: 5%;
+
+}
+.b1 {
+    float: right;
+    font-size: x-large;
+    color: rgba(255, 13, 25, 0.87);
+}
+.b2 {
+    float: right;
+    font-size: x-large;
+    color: rgba(255, 13, 25, 0.87);
+}
+.h1 {
+    margin-left: 30%;
+    margin-top: 5%;
+    color: rgba(255, 13, 25, 0.87);
+}
+.line {
+    border: 10px solid rgb(255, 140, 136);
+  border-radius: 3px;
+}
+.h3 {
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.embed {
+    margin-left: 100px; 
+}
+.rounded-circle {
+    height: 220px;
+    width: 220px;
+    margin-left: 80px;
+    padding: 50px;
+
+}
+body {
+    background-color: black;
+}
