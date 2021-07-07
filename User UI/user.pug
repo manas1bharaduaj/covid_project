@@ -1,0 +1,63 @@
+doctype html
+head
+  link(rel='stylesheet' href='user.css')
+  link(rel='stylesheet' href="'https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'")
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+.container
+  h3.username #{User Name}
+  .details
+    h2.reginfo  User Info
+    p  Name : #{ name }
+    p  Father's Name : #{ father name}
+    p.dob  DOB : #{ dob}
+    p.add  Addresss : #{address}
+    .status
+      button.btn.btn-primary(type='button' data-toggle='modal' data-target='#myModal1')
+        | Status of  vaccination
+      #myModal1.modal.fade
+        .modal-dialog.modal-dialog-centered(style='color: rgb(54, 54, 88);')
+          .modal-content
+            .modal-header
+              h4.modal-title No. Of Doses : #{ number }
+              button.close(type='button' data-dismiss='modal') &times;
+            .modal-body
+              | You are vaccninated with #{name of vaccine} on #{date} #{ time }
+            .modal-footer
+              button.btn.btn-danger(type='button' data-dismiss='modal') Close
+    br
+    .reg
+      button.btn.btn-primary(type='button' data-toggle='modal' data-target='#myModal2')
+        | Apply For Vaccine
+      // The Modal
+      #myModal2.modal.fade
+        .modal-dialog.modal-dialog-centered(style='color: rgb(54, 54, 88);')
+          .modal-content
+            // Modal Header
+            .modal-header
+              h4.modal-title  Enter Your Addhaar Number 
+              button.close(type='button' data-dismiss='modal') &times;
+            // Modal body
+            .modal-body
+              form.was-validated(action='#')
+                .form-group
+                  input#Adhaar.form-control(placeholder='Addhar Number' type='number' required='')
+                  .valid-feedback Valid.
+                  .invalid-feedback Please fill out this field.
+                button.btn.btn-primary(type='submit') Apply
+            // Modal footer
+            .modal-footer
+              button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+    p.phn   Phone Number : #{ phone number}
+    p.gender Gender : #{ gender }
+    p.email Email : #{ email}
+    p.adh  Adhaar Card : #{ aadhar number}
+.logout
+  a(href='#')
+    button.btn.btn-danger(type='button')  Log Out
