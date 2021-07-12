@@ -30,7 +30,7 @@
               </tr>
             </thead>
             <tbody id="myTable">
-              <tr>
+              <tr id="row1">
                   <td>manas</td>
                   <td>kundan kumar singh</td>
                 <td>8217179</td>
@@ -38,9 +38,43 @@
                 <td>gcqeubqe</td>
                 <td>gcqeubqe</td>
                 <td>gcqeubqe</td>
+                <td>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#accept">
+                   Accept
+                  </button>
+                
+                  
+                  <div style="color: rgb(25, 25, 83);"  class="modal fade" id="accept">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                      
+                    
+                        <div class="modal-header">
+                          <h4 class="modal-title">Schedule Date</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                      
+                        <div class="modal-body">
+                          <input class="form-control input-sm" id="inputsm" type="date"><br>
+                          <button type="submit" class="btn btn-primary" >Confirm Date</button>
+                          
+                        </div>
+                        
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  </td>
+                <td><button onclick="removeRow()" class=" btn btn-danger"> Decline</button></td>
+                
 
               </tr>
-              <tr>
+              <tr >
                 <td>ueguewh</td>
                 <td>ueguewh</td>
               <td>gcqeubqe</td>
@@ -70,6 +104,10 @@
             });
           });
         });
+        // make a function to make it dynamic and target each id of the row. and then call the function 
+        function removeRow() {
+          document.getElementById("row1").remove();
+        }
         </script>
         
 </body>
